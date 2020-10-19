@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Navbar, Image } from 'react-bootstrap';
 
 import './styles/App.css';
-import dogImg from './assets/dog.jpg';
+import catImg from './assets/cat.jpg';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             marginTop: '3em',
           }}
         >
-          <Image style={{ maxWidth: '100%' }} src={dogImg} />
+          <Image style={{ maxWidth: '100%' }} src={catImg} />
         </div>
       </Container>
     </div>
