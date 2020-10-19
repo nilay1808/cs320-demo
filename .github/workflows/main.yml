@@ -17,10 +17,6 @@ jobs:
           node-version: '12.x'
       - name: Install
         run: npm install
-      - name: Compress Images
-        uses: calibreapp/image-actions@master
-        with:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
       - name: Run tests
         run: npm run test
       - name: Run Build
