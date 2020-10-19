@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">Demo App</Navbar.Brand>
+          <Navbar.Brand href="#home">Hello 320</Navbar.Brand>
         </Container>
       </Navbar>
       <Container>
