@@ -1,0 +1,18 @@
+name: Test Image Compress
+
+on:
+  pull_request:
+    branches:
+      - master
+      - test-run
+      - release/*
+
+jobs:
+  test-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Compress Images
+        uses: calibreapp/image-actions@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
