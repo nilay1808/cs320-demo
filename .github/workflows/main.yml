@@ -21,5 +21,3 @@ jobs:
         run: npm run test
       - name: Run Build
         run: npm run build
-      - name: Deploy react app to github pages
-        uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
