@@ -1,0 +1,30 @@
+name: Test CI
+
+on:
+  push:
+    branches:
+      - master
+      - release/*
+
+jobs:
+  test-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@master
+        with:
+          node-version: '12.x'
+      - name: Install
+        run: npm install
+      - name: Run ESLint
+        run: eslint . --ext .js,.jsx,.ts,.tsx
+      - name: Compress Images
+        uses: calibreapp/image-actions@master
+        with:
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
+      - name: Run tests
+        run: npm run test
+      - name: Run Build
+        run: npm run build
+      - name: Deploy react app to github pages
+        uses: tanwanimohit/deploy-react-to-ghpages@v1.0.1
